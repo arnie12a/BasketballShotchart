@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    <div class="outer-court"></div>
+    <div class="semi-circle"></div>
+    <div class="free-throw-box"></div>
+    <div class="top-key-circle"></div>
+    <div class="hello">
+        <h3>Add Shots here</h3>
+        <p>Select where you shot the ball.</p>
+        <p>Did you make or miss the shot?</p>
+
+        <form>
+            <input type="radio" id="made-shot" name="shots" value="made-shot">
+            <label for="made-shot">Made Shot</label><br>
+            <input type="radio" id="missed-shot" name="shots" value="missed-shot">
+            <label for="missed-shot">Missed Shot</label><br>
+        </form>
+        
+        <p id="demo"></p>
+        <!--
+        <p id="xlocation">x location</p>
+        <p id="ylocation">y location</p>
+        <h1 id="demo-shot"></h1>
+        -->
+        <h2 id="message"></h2>
+    </div>
+
+    <div class="statistics">
+        <h1>Shooting Statistics</h2>
+        <h2 id="points">Pts: </h3>
+        <h4 id="data"></h4>
+    </div>
+    
+</body>
+</html>

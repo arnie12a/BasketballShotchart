@@ -7,23 +7,23 @@ function myFunction(e) {
   var yPos = e.clientY;
 
   if(xPos > 10 & xPos < 532 & yPos < 490 & yPos > 25){
-    document.getElementById("demo").innerHTML = "Shot recorded";
+    //document.getElementById("demo").innerHTML = "Shot recorded";
     if(document.getElementById('made-shot').checked) {
         //Made shot radio button is checked
-        document.getElementById("message").innerHTML = "Shot was made!"
+        //document.getElementById("message").innerHTML = "Shot was made!"
         createMadeDiv(xPos, yPos, count);
         count = count + 1
         //document.getElementById("points").innerHTML = "Pts: " + count
     }else if(document.getElementById('missed-shot').checked) {
         //Missed shot radio button is checked
-        document.getElementById("message").innerHTML = "Shot was missed!"
+        //document.getElementById("message").innerHTML = "Shot was missed!"
         createMissedDiv(xPos, yPos, count);
         count = count + 1
         //document.getElementById("points").innerHTML = "Pts: " + count
     }
   }
   else{
-    document.getElementById("demo").innerHTML = "Please select a valid shot on the court!";
+    //document.getElementById("demo").innerHTML = "Please select a valid shot on the court!";
     document.getElementById("message").innerHTML = ""
   }
   var shots = countMakes(count)
@@ -105,8 +105,17 @@ right side is at (512, 35)
       }
     }
   }
-  var finalMessage = "FG: " + (twoPointMade+threePointMade) + "/" + (twoPointTotal+threePointTotal) + "<br>3PT: " + threePointMade + "/" + threePointTotal
-  document.getElementById("data").innerHTML = finalMessage
+  var fieldGoalPercentage = Math.round((twoPointMade+threePointMade)/(twoPointTotal+threePointTotal)*100, 2)
+  var threePointPercentage = Math.round((threePointMade)/(threePointTotal)*100, 2)
+
+  //var finalMessage = "FG: " + (twoPointMade+threePointMade) + "/" + (twoPointTotal+threePointTotal) + "<br>3PT: " + threePointMade + "/" + threePointTotal
+  var finalMessage = "FG: " + fieldGoalPercentage + "%<br>3PT: " + threePointPercentage + "%"
+  if(!fieldGoalPercentage || !threePointPercentage){
+    document.getElementById("data").innerHTML = ""
+  }
+  else{
+    document.getElementById("data").innerHTML = finalMessage
+  }
   shots.push(threePointMade)
   shots.push(twoPointMade)
   return shots;

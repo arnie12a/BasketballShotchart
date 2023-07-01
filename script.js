@@ -109,7 +109,7 @@ right side is at (512, 35)
   var threePointPercentage = Math.round((threePointMade)/(threePointTotal)*100, 2)
 
   //var finalMessage = "FG: " + (twoPointMade+threePointMade) + "/" + (twoPointTotal+threePointTotal) + "<br>3PT: " + threePointMade + "/" + threePointTotal
-  var finalMessage = "FG: " + fieldGoalPercentage + "%<br>3PT: " + threePointPercentage + "%"
+  var finalMessage = "FG: " + (twoPointMade+threePointMade) + "/" + (twoPointTotal+threePointTotal) + " (" + fieldGoalPercentage + "%)<br>3PT: " + threePointMade + "/" + threePointTotal + " (" + threePointPercentage + "%)"
   if(!fieldGoalPercentage || !threePointPercentage){
     document.getElementById("data").innerHTML = ""
   }

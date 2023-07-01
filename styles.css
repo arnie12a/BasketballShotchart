@@ -49,7 +49,7 @@ div {
 .hello {
   text-align: center;
   background-color: whitesmoke;
-  width: 250px;
+  width: 350px;
   float: right;
   border-radius: 50%;
 }
@@ -61,7 +61,7 @@ div {
 
 
 .statistics {
-  width: 250px;
+  width: 350px;
   background-color: orange;
   float: right;
   text-align: center;

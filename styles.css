@@ -51,7 +51,7 @@ div {
   background-color: whitesmoke;
   width: 350px;
   float: right;
-  border-radius: 50%;
+  border-radius: 75%;
 }
 
 
@@ -65,5 +65,5 @@ div {
   background-color: orange;
   float: right;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 75%;
 }
